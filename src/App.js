@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Start from "./components/Start"
 
-function App() {
+export default function App() {
+
+  const [start, setStart] = useState(false)
+
+
+  function startQuiz(){
+    setStart(true)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main className="App">
+      {
+        start
+          ?
+          //Actual Test
+          <div className="Quiz">
+            <h1>Test</h1>
+          </div>
+          :
+          //Start Page
+          <Start 
+            startQuiz ={startQuiz}
+          />
+      }
+    </main>
+  )
 }
 
-export default App;
