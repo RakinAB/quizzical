@@ -1,18 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
 body{
   background-color: #e4e6ea;
+  font-family: 'Karla', sans-serif;
 }
 
 .startPage{
   width:fit-content;
   margin:auto;
   padding-top:200px;
-  justify-content: space-between;
+  text-align: center;
 }
 
+.startPage > h1{
+  font-size:47px;
+}
+
+.startPage > h3{
+  padding-bottom:10px;
+}
 
 .start{
   width:150px;
   height:50px;
   border-radius:30px;
   align-self: center;
+  border:none;
+  font-family: 'Karla', sans-serif;
+  background-color: rgb(165, 197, 255);
+  color:white;
+  cursor:pointer;
+}
+
+.start:focus{
+  outline: none;
+}
+
+.start:active{
+  box-shadow: inset 5px 5px 10px -3px #8ea9d6;
 }

@@ -1,14 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Start from "./components/Start"
+import Quiz from "./components/Quiz"
 
 export default function App() {
 
   const [start, setStart] = useState(false)
 
-
   function startQuiz(){
-    setStart(true)
+    setStart(true);
   }
   return (
     <main className="App">
@@ -16,9 +16,7 @@ export default function App() {
         start
           ?
           //Actual Test
-          <div className="Quiz">
-            <h1>Test</h1>
-          </div>
+          <Quiz />
           :
           //Start Page
           <Start 
